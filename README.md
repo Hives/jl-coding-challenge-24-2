@@ -3,6 +3,8 @@
 Texas Hold 'Em
 <https://coding-challenges.jl-engineering.net/challenges/challenge-24/>
 
+Using Haskell
+
 ## Toolchain
 
 This project uses `stack` with resolver `lts-15.3`, corresponding to GHC
@@ -12,6 +14,12 @@ compiler version `8.8.2`.
 
 ```shell
 > stack build && stack exec poker-exe
+```
+
+## Tests
+
+```shell
+> stack test
 ```
 
 ## Features
