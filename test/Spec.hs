@@ -4,7 +4,7 @@ import           Test.Hspec
 main :: IO ()
 main = hspec $ do
     describe "Detecting types of hand" $ do
-        describe "getStraight" $ do
+        describe "Get straight" $ do
             it "returns empty list for empty hand" $ do
                 getStraight [] `shouldBe` []
 
@@ -85,8 +85,3 @@ main = hspec $ do
                                , Card 10 C
                                , Card 14 C
                                ]
-
-        describe "getValues" $ do
-            it "returns the unique values in a hand" $ do
-                getUniqueValues (stringToCards "2C 2S 2H AD 3D 4C 5S 6H")
-                    `shouldBe` [2, 3, 4, 5, 6, 14]

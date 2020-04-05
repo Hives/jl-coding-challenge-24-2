@@ -29,9 +29,6 @@ sortCards (Card value1 suit1) (Card value2 suit2) | value1 > value2  = GT
 stringToCards :: String -> [Card]
 stringToCards = sortBy sortCards . map toCard . words
 
-getUniqueValues :: [Card] -> [Int]
-getUniqueValues = sort . nub . map (\(Card value _) -> value)
-
 getStraight :: [Card] -> [Card]
 getStraight []             = []
 getStraight (card : cards) = f cards [card]
@@ -44,4 +41,3 @@ getStraight (card : cards) = f cards [card]
    where
     (Card value        _) = card
     (Card lastAccValue _) = last acc
-
